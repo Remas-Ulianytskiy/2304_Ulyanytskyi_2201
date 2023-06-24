@@ -144,6 +144,7 @@ int main() {
             case 1:
                 cout << "\nExample array ";
                 display_array_elements(example_array);
+
                 if (operation == 1)
                     result_array = Sort_by_Bubble::sort_array(example_array);
                 if (operation == 2)
@@ -159,21 +160,25 @@ int main() {
                 display_array_elements(random_array);
 
                 if (operation == 1)
-                    result_array = Sort_by_Bubble::sort_array(create_random_array(array_size));
+                    result_array = Sort_by_Bubble::sort_array(random_array);
                 if (operation == 2)
-                    result_array = Sort_By_Selection::sort_array(create_random_array(array_size));
+                    result_array = Sort_By_Selection::sort_array(random_array);
                 if (operation == 3)
-                    result_array = Sort_By_Insertion::sort_array(create_random_array(array_size));
+                    result_array = Sort_By_Insertion::sort_array(random_array);
                 break;
             case 3:
                 cout << "Enter array size: ";
                 array_size = get_user_value();
+                user_array = create_user_array(array_size);
+                cout << "\nUser array ";
+                display_array_elements(user_array);
+
                 if (operation == 1)
-                    result_array = Sort_by_Bubble::sort_array(create_user_array(array_size));
+                    result_array = Sort_by_Bubble::sort_array(user_array);
                 if (operation == 2)
-                    result_array = Sort_By_Selection::sort_array(create_user_array(array_size));
+                    result_array = Sort_By_Selection::sort_array(user_array);
                 if (operation == 3)
-                    result_array = Sort_By_Insertion::sort_array(create_user_array(array_size));
+                    result_array = Sort_By_Insertion::sort_array(user_array);                
                 break;
             default:
                 cout << "Invalid input!";
