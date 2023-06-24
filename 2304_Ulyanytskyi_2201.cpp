@@ -159,19 +159,19 @@ int main() {
                 display_array_elements(random_array);
 
                 if (operation == 1)
-                    result_array = Sort_by_Bubble::sort_array(example_array);
+                    result_array = Sort_by_Bubble::sort_array(create_random_array(array_size));
                 if (operation == 2)
                     result_array = Sort_By_Selection::sort_array(create_random_array(array_size));
                 if (operation == 3)
-                    result_array = Sort_By_Insertion::sort_array(create_user_array(array_size));
+                    result_array = Sort_By_Insertion::sort_array(create_random_array(array_size));
                 break;
             case 3:
                 cout << "Enter array size: ";
                 array_size = get_user_value();
                 if (operation == 1)
-                    result_array = Sort_by_Bubble::sort_array(example_array);
+                    result_array = Sort_by_Bubble::sort_array(create_user_array(array_size));
                 if (operation == 2)
-                    result_array = Sort_By_Selection::sort_array(create_random_array(array_size));
+                    result_array = Sort_By_Selection::sort_array(create_user_array(array_size));
                 if (operation == 3)
                     result_array = Sort_By_Insertion::sort_array(create_user_array(array_size));
                 break;
