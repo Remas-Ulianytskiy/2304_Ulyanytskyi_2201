@@ -86,13 +86,13 @@ namespace Sort_By_Insertion {
         const unsigned int ARRAY_SIZE = array.size();
         vector<int> result_array = array;
 
-        for (int i = 1; i < ARRAY_SIZE; i++) {
+        for (int i = 1; i < ARRAY_SIZE; ++i) {
             int current_element = result_array[i];
             int j = i - 1;
 
             while (j >= 0 && result_array[j] > current_element) {
                 result_array[j + 1] = result_array[j];
-                j--;
+                --j;
             }
             result_array[j + 1] = current_element;
         }
